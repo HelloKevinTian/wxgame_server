@@ -1,0 +1,7 @@
+{
+	"game": {
+		"host": "127.0.0.1",
+		"db": "wxgame_server",
+		"port": 13600
+	}
+}

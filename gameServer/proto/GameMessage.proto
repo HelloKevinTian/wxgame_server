@@ -1,0 +1,48 @@
+package cs2server;
+
+option optimize_for = LITE_RUNTIME;
+
+import "Property.proto";
+
+//-----------------------------游戏协议ID-----------------------------------------
+enum GAME_PROTOCOL_MSG_ID
+{
+    message_s2c_error_code      		= 1000;			// 错误码
+
+    message_c2s_get_time				= 1001;			//getTime 获取服务器时间
+    message_s2c_get_time				= 1002;
+
+    message_c2s_login					= 1101;			//login
+    message_s2c_login					= 1102;
+
+};
+
+
+//-----------------------------游戏协议结构-----------------------------------------
+message s2c_error_code
+{
+	required Tail tail = 1;
+    required int32 code = 2;        // 错误码
+}
+
+message c2s_get_time
+{
+	required Head head = 1;
+}
+
+message s2c_get_time
+{
+	required Tail tail = 1;
+	required int64 time = 2;		// 时间戳
+	required string date = 3;		// 格式化时间
+}
+
+message c2s_login
+{
+	required Head head = 1;
+}
+
+message s2c_login
+{
+	required Tail tail = 1;
+}

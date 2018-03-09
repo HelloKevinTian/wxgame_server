@@ -1,0 +1,29 @@
+[{
+	"name": "game_server1",
+	"server_type": "game",
+	"type": "ws",
+	"host": "0.0.0.0",
+	"port": 30006,
+	"use_json": false,
+	"big_endian": true,
+	"timeout": 3600000,
+	"verifyMsg": "/handle/message/wsVerifyMsg",
+	"connection": "/handle/message/connection",
+	"disconnect": "/handle/message/disconnect",
+	"nolog_message": ["heartbeat"],
+	"mgr_list": []
+}, {
+	"name": "game_server2",
+	"server_type": "game",
+	"type": "tcp",
+	"host": "0.0.0.0",
+	"port": 30007,
+	"use_json": false,
+	"big_endian": true,
+	"timeout": 3600000,
+	"verifyMsg": "/handle/message/tcpVerifyMsg",
+	"connection": "/handle/message/connection",
+	"disconnect": "/handle/message/disconnect",
+	"nolog_message": ["heartbeat"],
+	"mgr_list": []
+}]

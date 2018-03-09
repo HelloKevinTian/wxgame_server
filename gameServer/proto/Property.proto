@@ -1,0 +1,21 @@
+package cs2server;
+
+option optimize_for = LITE_RUNTIME;
+
+// c2s必带结构
+message Head
+{
+	required string token = 1;
+	required string uid = 2;
+	required int32 flowid = 3; //消息流水号:自增id,每次登录重置
+	optional string version = 4;
+	optional string channel = 5;
+	required string op = 6;
+}
+
+// s2c必带结构
+message Tail
+{
+	required int64 time = 1; //服务器时间
+	required int32 flowid = 2; //消息流水号
+}

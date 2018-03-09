@@ -1,0 +1,15 @@
+{
+	"game": [{
+		"msgid": "getTime",
+		"path": "player/getTime",
+		"desc": "取时间"
+	}, {
+		"msgid": "heartbeat",
+		"path": "player/heartbeat",
+		"desc": "心跳"
+	}, {
+		"msgid": "login",
+		"path": "player/login",
+		"desc": "登陆"
+	}]
+}
